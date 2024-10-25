@@ -12,19 +12,20 @@ MORSE_CODE_DICT = {
 }
 
 # Function to encode the message
-def encode_to_morse(message):
+def encode_morse(message):
     
     #here where you going to code
 
 
 # Function to decode the message
-def decode_from_morse(message):
+def decode_morse(message):
     #here where you going to code
 
 
 
 message = input("Enter the message >>")
 
-encode_to_morse(message)
+
+
 print(f"Encoded message: {message}")
 print(f"Decoded message: {message}")
