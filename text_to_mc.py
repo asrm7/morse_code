@@ -9,3 +9,21 @@ text_to_morse_code = {
     '(': '-.--.', ')': '-.--.-', '&': '.-...', ':': '---...', ';': '-.-.-.', '=': '-...-', 
     '+': '.-.-.', '-': '-....-', '_': '..--.-', '"': '.-..-.', '$': '...-..-', '@': '.--.-.'
 }
+
+def encode_morse(message):
+    encoded_message = ""
+    for l in message.upper():
+        if l in text_to_morse_code:
+            encoded_message += text_to_morse_code[l] + " "
+        else:
+            encoded_message += l + " "
+    return encoded_message.strip()
+
+while True: 
+    message = input("Enter the message to be coded: ")
+    if message:
+        encoded_message = encode_morse(message)
+        print("The message in Morse code is: " + encoded_message)
+    else:
+        print("The message is empty")
+        break
